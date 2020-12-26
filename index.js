@@ -8,10 +8,9 @@
 // res.writeHead(200,{'content-type':'application\json'})
 // res.write(JSON.stringify(data));
 // res.end();
-// }).listen(3900)
+// }).listen(4000)
 
 // API work ends here
-
 
 // email work starts
 
@@ -43,3 +42,53 @@
 // })
 
 // email work ends here
+
+// read file work start
+
+// var http = require("http");
+// var fs = require("fs");
+// http
+//   .createServer((req, res) => {
+//     fs.readFile("index.html", (err, data) => {
+//       res.writeHead(200, { "Content-Type": "text.html" });
+//       res.write(data);
+//       return res.end();
+//     });
+//   })
+//   .listen(4000);
+
+//   read file work ends here
+
+// connection of nodeJS with mysql
+
+// var mysql = require("mysql");
+// const nodemon = require("nodemon");
+// var con = mysql.createConnection({
+//   host: "localhost",
+//   user: "root",
+//   password: "",
+//   database: "resto",
+// });
+// con.connect((error) => {
+//   if (error) {
+//     console.log(error);
+//   } else {
+//     console.log("connected");
+//   }
+// });
+
+// connection work ends here
+
+
+// event emitter work starts here
+
+// var events = require("events");
+// var eventEmitter = new events.EventEmitter();
+
+// eventEmitter.on("speak", (name) => {
+//   console.log(name, "is speaking");
+// });
+
+// eventEmitter.emit("speake", "Hammad");
+
+// event emitter work ends here
