@@ -1,4 +1,5 @@
 // use of middleware with diff routes
+var PORT=process.env.PORT||9900
 
 // const { Router } = require("express");
 // const express = require("express");
@@ -20,19 +21,17 @@
 
 // use of middleware ends here
 
-// const express = require("express");
-// const app = express();
+const express = require("express");
+const app = express();
 // app.set("view engine ", "ejs");
 // app.get("/profile/:name", (req, res) => {
 //   res.render("profile",{name:req.params.name});
 // });
 
-// app.listen(4200);
+// app.listen(7600);
 
 // database integration method starts
-var PORT=process.env.PORT||5000
-const express = require("express");
-const app = express();
+
 const mongoose = require("mongoose");
 const Products = require("./products");
 mongoose
