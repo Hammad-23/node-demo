@@ -1,5 +1,9 @@
 // use of middleware with diff routes
+const express = require("express");
 var PORT=process.env.PORT||9900
+const app = express();
+app.set("view engine ", "ejs");
+
 
 // const { Router } = require("express");
 // const express = require("express");
@@ -21,9 +25,6 @@ var PORT=process.env.PORT||9900
 
 // use of middleware ends here
 
-const express = require("express");
-const app = express();
-// app.set("view engine ", "ejs");
 // app.get("/profile/:name", (req, res) => {
 //   res.render("profile",{name:req.params.name});
 // });
@@ -71,10 +72,22 @@ mongoose
 //   .catch((err) => console.warn(err));
 
 // get products api starts
-
+// app.set("view engine ", "ejs");
 app.get("/", (req, res) => {
-  Products.find().then((data) => {
-    res.status(200).json(data);
+ return Products.find().then((data) => {
+    return res.status(200).json(data);
   });
+  
+
+    // app.use(function(err, req, res, next) {
+    //   res.status(err.status || 500);
+    //   res.render('error', {
+    //   message: err.message,
+    //   error: err
+    //   });
+    // });
+
 });
-app.listen(PORT);
+app.listen(PORT,()=>{
+  console.log('port is runing at',PORT)
+});
