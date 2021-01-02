@@ -30,7 +30,7 @@
 // app.listen(4200);
 
 // database integration method starts
-
+var PORT=process.env.PORT||5000
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -78,4 +78,4 @@ app.get("/products", (req, res) => {
     res.status(200).json(data);
   });
 });
-app.listen(4400);
+app.listen(PORT);
