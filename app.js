@@ -72,7 +72,7 @@ mongoose
 
 // get products api starts
 
-app.get("/products", (req, res) => {
+app.get("/", (req, res) => {
   Products.find().then((data) => {
     res.status(200).json(data);
   });
